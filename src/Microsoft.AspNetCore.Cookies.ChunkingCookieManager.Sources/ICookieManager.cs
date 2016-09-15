@@ -3,6 +3,7 @@
 
 using Microsoft.AspNetCore.Http;
 
+#if SECURITY
 namespace Microsoft.AspNetCore.Authentication.Cookies
 {
     /// <summary>
@@ -11,6 +12,12 @@ namespace Microsoft.AspNetCore.Authentication.Cookies
     /// </summary>
     public interface ICookieManager
     {
+#else
+namespace Microsoft.AspNetCore.Cookies
+{
+    internal interface ICookieManager
+    {
+#endif
         /// <summary>
         /// Retrieve a cookie of the given name from the request.
         /// </summary>

@@ -5,8 +5,13 @@ using System;
 using Microsoft.AspNetCore.Http;
 using Xunit;
 
-namespace Microsoft.AspNetCore.Authentication.Cookies.Infrastructure
+#if SECURITY
+namespace Microsoft.AspNetCore.Authentication.Cookies
 {
+#else
+namespace Microsoft.AspNetCore.Cookies.Internal
+{
+#endif
     public class CookieChunkingTests
     {
         [Fact]

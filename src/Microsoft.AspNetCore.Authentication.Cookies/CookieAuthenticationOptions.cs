@@ -2,7 +2,6 @@
 // Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
 using System;
-using System.ComponentModel;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.DataProtection;
@@ -84,8 +83,8 @@ namespace Microsoft.AspNetCore.Builder
 
         /// <summary>
         /// Controls how much time the cookie will remain valid from the point it is created. The expiration
-        /// information is in the protected cookie ticket. Because of that an expired cookie will be ignored 
-        /// even if it is passed to the server after the browser should have purged it 
+        /// information is in the protected cookie ticket. Because of that an expired cookie will be ignored
+        /// even if it is passed to the server after the browser should have purged it
         /// </summary>
         public TimeSpan ExpireTimeSpan { get; set; }
 
@@ -99,7 +98,7 @@ namespace Microsoft.AspNetCore.Builder
         /// The LoginPath property informs the middleware that it should change an outgoing 401 Unauthorized status
         /// code into a 302 redirection onto the given login path. The current url which generated the 401 is added
         /// to the LoginPath as a query string parameter named by the ReturnUrlParameter. Once a request to the
-        /// LoginPath grants a new SignIn identity, the ReturnUrlParameter value is used to redirect the browser back  
+        /// LoginPath grants a new SignIn identity, the ReturnUrlParameter value is used to redirect the browser back
         /// to the url which caused the original unauthorized status code.
         /// </summary>
         public PathString LoginPath { get; set; }
@@ -117,15 +116,15 @@ namespace Microsoft.AspNetCore.Builder
 
         /// <summary>
         /// The ReturnUrlParameter determines the name of the query string parameter which is appended by the middleware
-        /// when a 401 Unauthorized status code is changed to a 302 redirect onto the login path. This is also the query 
-        /// string parameter looked for when a request arrives on the login path or logout path, in order to return to the 
+        /// when a 401 Unauthorized status code is changed to a 302 redirect onto the login path. This is also the query
+        /// string parameter looked for when a request arrives on the login path or logout path, in order to return to the
         /// original url after the action is performed.
         /// </summary>
         public string ReturnUrlParameter { get; set; }
 
         /// <summary>
         /// The Provider may be assigned to an instance of an object created by the application at startup time. The middleware
-        /// calls methods on the provider which give the application control at certain points where processing is occurring. 
+        /// calls methods on the provider which give the application control at certain points where processing is occurring.
         /// If it is not provided a default instance is supplied which does nothing when the methods are called.
         /// </summary>
         public ICookieAuthenticationEvents Events { get; set; }
@@ -133,7 +132,7 @@ namespace Microsoft.AspNetCore.Builder
         /// <summary>
         /// The TicketDataFormat is used to protect and unprotect the identity and other properties which are stored in the
         /// cookie value. If it is not provided a default data handler is created using the data protection service contained
-        /// in the IApplicationBuilder.Properties. The default data protection service is based on machine key when running on ASP.NET, 
+        /// in the IApplicationBuilder.Properties. The default data protection service is based on machine key when running on ASP.NET,
         /// and on DPAPI when running in a different process.
         /// </summary>
         public ISecureDataFormat<AuthenticationTicket> TicketDataFormat { get; set; }
