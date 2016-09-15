@@ -3,6 +3,8 @@
 
 using Microsoft.AspNetCore.Http;
 
+// Keep the type public for Security repo as it would be a breaking change to change the accessor now.
+// Make this type internal for other repos as it could be used by multiple projects and having it public causes type conflicts.
 #if SECURITY
 namespace Microsoft.AspNetCore.Authentication.Cookies
 {
