@@ -6,12 +6,11 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.Props" Condition="'$(VSToolsPath)' != ''" />
   <PropertyGroup Label="Globals">
-    <ProjectGuid>b6297507-eecf-4114-9b38-6cce7f9c3eb5</ProjectGuid>
-    <RootNamespace>Microsoft.AspNetCore.Cookies.ChunkingCookieManager.Sources</RootNamespace>
+    <ProjectGuid>2690fbe6-9d27-4c84-b82c-11188b0bcda3</ProjectGuid>
+    <RootNamespace>Microsoft.AspNetCore.ChunkingCookieManager.Sources</RootNamespace>
     <BaseIntermediateOutputPath Condition="'$(BaseIntermediateOutputPath)'=='' ">.\obj</BaseIntermediateOutputPath>
     <OutputPath Condition="'$(OutputPath)'=='' ">.\bin\</OutputPath>
   </PropertyGroup>
-
   <PropertyGroup>
     <SchemaVersion>2.0</SchemaVersion>
   </PropertyGroup>

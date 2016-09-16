@@ -9,7 +9,7 @@ using Xunit;
 namespace Microsoft.AspNetCore.Authentication.Cookies
 {
 #else
-namespace Microsoft.AspNetCore.Cookies.Internal
+namespace Microsoft.AspNetCore.Internal
 {
 #endif
     public class CookieChunkingTests

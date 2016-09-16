@@ -15,7 +15,7 @@ namespace Microsoft.AspNetCore.Authentication.Cookies
     public interface ICookieManager
     {
 #else
-namespace Microsoft.AspNetCore.Cookies
+namespace Microsoft.AspNetCore.Internal
 {
     internal interface ICookieManager
     {
